@@ -14,9 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: display user
-      run: |
-        echo ${{secrets.DOCKER_USER}}
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
