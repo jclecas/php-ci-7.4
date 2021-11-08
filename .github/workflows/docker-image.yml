@@ -22,6 +22,6 @@ jobs:
       run: |
         docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag "$IMAGE_TAG"
+      run: docker build . --file Dockerfile --tag jeanchristophelecas/php-ci-7.4:latest
     - name: Docker Push
-      run: docker push "$IMAGE_TAG"
+      run: docker push jeanchristophelecas/php-ci-7.4:latest
