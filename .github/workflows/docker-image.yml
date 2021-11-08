@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag jeanchristophelecas/php-ci-7.4:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/php-ci-7.4
+      run: docker push jeanchristophelecas/php-ci-7.4
