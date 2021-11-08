@@ -1,4 +1,4 @@
-FROM php:7.4-cli-stretch
+FROM php:7.4-cli
 
 LABEL maintainer="JC Lecas<jeanchristophelecas@gmail.com>"
 
