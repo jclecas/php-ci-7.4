@@ -18,10 +18,10 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-        IMAGE_TAG: $(date +%s)
+        IMAGE_TAG: jeanchristophelecas/php-ci-7.4:$(date +%s)
       run: |
         docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag "jeanchristophelecas/php-ci-7.4:$IMAGE_TAG"
+      run: docker build . --file Dockerfile --tag "$IMAGE_TAG"
     - name: Docker Push
-      run: docker push "jeanchristophelecas/php-ci-7.4:$IMAGE_TAG"
+      run: docker push "$IMAGE_TAG"
