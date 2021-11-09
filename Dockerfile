@@ -65,11 +65,11 @@ RUN \
     && ln -s ~/magento-coding-standard/vendor/bin/phpcs /usr/local/bin/phpcs \
     && ln -s ~/magento-coding-standard/vendor/bin/phpcbf /usr/local/bin/phpcbf \
     && composer global require phpmd/phpmd \
-    && ln -s ~/.composer/vendor/bin/phpmd /usr/local/bin/phpmd \
+    && ln -s ~/.config/composer/vendor/bin/phpmd /usr/local/bin/phpmd \
     && composer global require sebastian/phpcpd \
-    && ln -s ~/.composer/vendor/bin/phpcpd /usr/local/bin/phpcpd \
+    && ln -s ~/.config/composer/vendor/bin/phpcpd /usr/local/bin/phpcpd \
     && composer global require phpmetrics/phpmetrics \
-    && ln -s ~/.composer/vendor/bin/phpmetrics /usr/local/bin/phpmetrics
+    && ln -s ~/.config/composer/vendor/bin/phpmetrics /usr/local/bin/phpmetrics
 
 RUN \
     curl -sL -o ~/phpda.pubkey https://raw.githubusercontent.com/mamuz/PhpDependencyAnalysis/v1.3.1/download/phpda.pubkey \
