@@ -81,8 +81,7 @@ RUN \
     && chmod +x /usr/local/bin/pdepend
 
 RUN \
-    curl -sL -o /usr/local/PHPCompatibility-9.3.5 https://github.com/PHPCompatibility/PHPCompatibility/archive/refs/tags/9.3.5.zip \
-    && phpcs --config-set installed_paths ../../..,/usr/local/PHPCompatibility-9.3.5
+    curl -sL -o /home/PHPCompatibility-9.3.5 https://github.com/PHPCompatibility/PHPCompatibility/archive/refs/tags/9.3.5.zip
 
 #RUN \
 #    curl -sL https://deb.nodesource.com/setup_10.x | bash \
