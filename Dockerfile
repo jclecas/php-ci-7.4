@@ -31,6 +31,7 @@ RUN \
     shellcheck \
     sshpass \
     unzip \
+    wget \
     zip \
     && apt-get clean autoclean autoremove -y \
     && rm -rf /var/lib/apt/lists/*
@@ -79,6 +80,11 @@ RUN \
 RUN \
     curl -sL -o /usr/local/bin/pdepend https://github.com/jakzal/pdepend/releases/download/2.5.2-jakzal-2/pdepend.phar \
     && chmod +x /usr/local/bin/pdepend
+
+RUN \
+    wget https://github.com/PHPCompatibility/PHPCompatibility/archive/refs/tags/9.3.5.zip
+    unzip 9.3.5.zip
+    phpcs --config-set installed_paths ../../..,/PHPCompatibility-9.3.5
 
 #RUN \
 #    curl -sL https://deb.nodesource.com/setup_10.x | bash \
